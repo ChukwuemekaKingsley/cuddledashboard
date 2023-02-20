@@ -66,7 +66,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="border-[0.5px] border-[#F97B04]/30">
-            <div className="grid grid-cols-7 text-[#333333] text-sm text-center px-4 py-6">
+            <div className="lg:grid overflow-x-scroll flex grid-cols-7 text-[#333333] text-sm text-center px-4 py-6">
               <div className="flex space-x-2 col-span-1 items-center">
                 <input type="checkbox" checked={true} readOnly />
                 <p>Vechicle No</p>

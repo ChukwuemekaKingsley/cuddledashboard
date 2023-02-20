@@ -38,7 +38,7 @@ export const SignInWithGoogle = async () =>
     const userSnapshot = await getDoc(docRef);
 
     if (userSnapshot.exists()) {
-        // if user exist just get the user email
+      // if user exist just get the user email
       let userInfo = result.user.email;
       return { userInfo };
     } else {
@@ -113,15 +113,12 @@ export const SignInWithGoogle = async () =>
               cost: "$100",
             },
           ],
-        }).then(() => {
-          let userInfo = result.user.email;
-          return {
-            userInfo,
-          };
         });
       } catch (error) {
         console.log(error);
       }
+      let userInfo = result.user.email;
+      return { userInfo };
     }
   });
 
@@ -140,7 +137,7 @@ export const getUserData = async (uid) => {
 };
 
 export const logout = async () => {
-    // signout of google, redirect to homepage
+  // signout of google, redirect to homepage
   signOut(auth).then(() => {
     console.log("SignedOut");
     window.location.pathname = "/";
